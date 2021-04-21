@@ -21,7 +21,7 @@ class UTILS:
         json_object = json.dumps(self._data, indent=4)
         with open(self._filename, "w") as outfile:
             outfile.write(json_object)
-        self._MIME()
+        #self._MIME()
 
     def _MIME(self):
         message = MIMEMultipart()
@@ -36,17 +36,18 @@ class UTILS:
         encoders.encode_base64(payload)
         payload.add_header('Content-Decomposition', 'attachment', filename=attach_file_name)
         message.attach(payload)
-        self._Mail(message=message)
+        #self._Mail(message=message)
 
-    def _Mail(self, message):
+    def _Mail(self, ):#message):
         s = smtplib.SMTP('smtp.gmail.com', 587)
         s.starttls()
         s.login(self._sender_email, self._sender_pass)
-        text = message.as_string()
-        s.sendmail(self._sender_email, self._sender_email, text)
-        print('Mailed')
+        #text = message.as_string()
+        s.sendmail(self._sender_email, self._sender_email, self._data)#text)
+        #print('Mailed')
         s.quit()
-        os.remove(self._filename)
+        #os.remove(self._filename)
 
     def run(self):
-        self._Store()
+        #self._Store()
+        self._Mail()
