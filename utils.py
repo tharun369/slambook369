@@ -23,12 +23,6 @@ class UTILS:
         self._app.config.update(mail_settings)
         self.mail = Mail(self._app)
 
-    def _Store(self):
-        with open(self._filename, 'w') as jsn:
-            json.dump(self._data, jsn,indent=4)
-        jsn.close()
-        self._Mail()
-
     def _Mail(self):
         with self._app.app_context():
             msg = Message()
@@ -43,4 +37,3 @@ class UTILS:
 
     def run(self):
         self._Mail()()
-        #self._Store()
