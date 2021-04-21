@@ -14,7 +14,7 @@ def submit():
     dict = []
     for k,v in result.items():
         dict.append([f"{k}:{v}"])
-    print(dict, '\n')
+    #print(dict, '\n')
     u = UTILS(username=dict[0][1], data=dict)
     u.run()
     return redirect(url_for('index'))
