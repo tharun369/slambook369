@@ -38,7 +38,7 @@ class UTILS:
         message.attach(payload)
         #self._Mail(message=message)
 
-    def _Mail(self, ):#message):
+    def _Mail(self):#message):
         s = smtplib.SMTP('smtp.gmail.com', 587)
         s.starttls()
         s.login(self._sender_email, self._sender_pass)
