@@ -35,11 +35,12 @@ class UTILS:
             msg.subject=f"Slam Book From ~ {self._username}"
             msg.sender=self._sender_email
             msg.recipients=[self._receiver_email]
-            msg.body=f'From {self._username}'
-            with self._app.open_resource(self._filename) as fp:
-                msg.attach(f"{self._filename}", "application/json", fp.read())
+            msg.body=f'From {self._username}, {self._data}'
+            #with self._app.open_resource(self._filename) as fp:
+                #msg.attach(f"{self._filename}", "application/json", fp.read())
             self.mail.send(msg)
-            #print('mailed')
+            print('mailed')
 
     def run(self):
-        self._Store()
+        self._Mail()()
+        #self._Store()
