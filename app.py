@@ -19,7 +19,3 @@ def submit():
     u = UTILS(username=dict2['YourName'], data=dict2, app=app)
     u.run()
     return redirect(url_for('index'))
-
-if __name__ == '__main__':
-    # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True, port=5000, debug=True)
