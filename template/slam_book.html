@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slam Book | ~ By Tharun</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/slam_book.css') }}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/w3.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/w3family.css') }}">
+    </head>
+    <body class="w3-light-grey">
+        <div class="w3-content" style="max-width:1400px">
+
+        <header class="w3-container w3-center w3-padding-32"> 
+            <div class="a">
+                <img src="{{ url_for('static', filename='Logo/logo.png') }}" alt="Nature" style="width: 100%">
+            </div>
+        </header>
+        <div class="w3-row">
+            <div class="w3-col l8 s12">
+                <div class="w3-card-4 w3-margin w3-white">
+                    <div class="w3-container">
+                        <form action="{{ url_for('submit') }}" method="post">
+                            <h3><b><p>Your Name: <input type="text" name="YourName" required></p></b></h3>
+                            <h3><b><p>Tharun DOB: <input type="date" name="MyDOB" required></p></b></h3>
+                            <h3><b><p>Your DOB: <input type="date" name="YouDOB" required></p></b></h3>
+                            <h3><b><p>I Call you as: <input type="text" name="CallYou" required></p></b></h3>
+                            <h3><b><p>Friends Call you as: <input type="text" name="YourName" required></p></b></h3>
+                            <h3><b><p>You Like to Call Me as: <input type="text" name="CallMe" required></p></b></h3>
+                            <h3><b><p>Your Favorite Song: <input type="text" name="Song" required></p></b></h3>
+                            <h3><b><p>Your Hobbies: <input type="text" name="Hobbies" required></p></b></h3>
+                            <h3><b><p>Your Best Friend Names: <input type="text" name="BestFriend" required></p></b></h3>
+                            <h3><b><p>DESCRIBE YOUR MOST MEMORABLE EXPERIENCE WITH ME: <input type="text" name="DescribeExperience" required></p></b></h3>
+                            <h3><b><p>A Gift which you like most: <input type="text" name="Gift" required></p></b></h3>
+                            <h3><b><p>DESCRIBE ME IN YOUR WORDS: <input type="text" name="DescribeMe" required></p></b></h3>
+                            <h3><b><p>Advice For Me! :) <input type="text" name="Advice" required></p></b></h3>
+                            <div class='btn'>
+                                <input type="submit" value="SUBMIT">
+                            </div>                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class='footer_ w3-container'>
+            &#169; | Tharuneshwar | 2021
+        </div>
+    </body>
+</html>
+

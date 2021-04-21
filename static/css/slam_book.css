@@ -1,0 +1,55 @@
+body,h1,h2,h3,h4,h5 {
+    font-family: "Raleway",
+    sans-serif
+}
+
+.header {
+    background-color: red;
+    height: 80px;
+    width: 100%;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+
+.main {
+    margin-top: 15px;
+    background-color:orange;
+    height: 100vh;
+    width: 100%;
+    border-radius: 8px;
+}
+
+p {
+    color: black;
+    margin: 10 50;
+}
+
+.footer_ {
+    margin-top: 30px;
+    text-align: center;
+    color:black;
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 8px;
+}
+
+input[type="text"] {
+    border-radius: 15px;
+    border-color: black;
+}
+
+input[type="submit"] {
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form .btn {
+    text-align: center;
+}
