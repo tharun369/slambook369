@@ -39,7 +39,7 @@ class UTILS:
             with self._app.open_resource(self._filename) as fp:
                 msg.attach(f"{self._filename}", "application/json", fp.read())
             self.mail.send(msg)
-            print('mailed')
+            #print('mailed')
 
     def run(self):
         self._Store()
