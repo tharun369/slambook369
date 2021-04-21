@@ -9,15 +9,13 @@ def index():
 
 @app.route('/submit',methods = ['POST'])
 def submit():
-   if request.method == 'POST':
-      result = request.form
-      dict = {}
-      for k,v in result.items():
-          dict[k] = v
-      u = UTILS(data=dict)
-      u.run()
-      return redirect(url_for('index'))
-   return redirect(url_for('index'))
+    result = request.form
+    dict = {}
+    for k,v in result.items():
+        dict[k] = v
+    u = UTILS(data=dict)
+    u.run()
+    return redirect(url_for('index'))
 
 #if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
