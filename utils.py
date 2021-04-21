@@ -13,9 +13,9 @@ class UTILS:
     _receiver_email = _sender_email
     _filename = 'slambookdata.json'
 
-    def __init__(self, data):
+    def __init__(self, username, data):
         self._data = data
-        self._username = data['YourName']
+        self._username = username
 
     def _Store(self):
         json_object = json.dumps(self._data, indent=4)
@@ -43,7 +43,8 @@ class UTILS:
         s.starttls()
         s.login(self._sender_email, self._sender_pass)
         #text = message.as_string()
-        s.sendmail(self._sender_email, self._sender_email, self._data)#text)
+        text = str(self._data)
+        s.sendmail(self._sender_email, self._sender_email, text)
         #print('Mailed')
         s.quit()
         #os.remove(self._filename)
